@@ -39,6 +39,9 @@ class WishlistFlow: Flow {
             return navigateToCastDetailScreen(with: castId)
         case .settings:
             return navigateToSettings()
+        case .settingsDone:
+            self.rootViewController.presentedViewController?.dismiss(animated: true)
+            return NextFlowItem.noNavigation
         default:
             return NextFlowItem.noNavigation
         }

@@ -56,9 +56,6 @@ class SettingsFlow: Flow {
             settingsAboutViewController.title = "About"
             self.rootViewController.showDetailViewController(settingsAboutViewController, sender: nil)
             return NextFlowItem.noNavigation
-        case .settingsDone:
-            self.rootViewController.dismiss(animated: true)
-            return NextFlowItem.noNavigation
         default:
             return NextFlowItem.noNavigation
         }

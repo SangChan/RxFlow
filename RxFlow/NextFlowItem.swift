@@ -36,4 +36,12 @@ public struct NextFlowItem {
     public static var noNavigation: [NextFlowItem] {
         return []
     }
+
+    /// Decide whether or not NextFlowItems represent a noNavigation instruction
+    ///
+    /// - Parameter nextFlowItems: the NectFlowItems to interprete
+    /// - Returns: true if this is a noNavigaction action
+    internal static func isNoNavigation (forNextFlowItems nextFlowItems: [NextFlowItem]) -> Bool {
+        return nextFlowItems.isEmpty
+    }
 }
